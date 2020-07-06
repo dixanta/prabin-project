@@ -16,7 +16,7 @@ import javax.persistence.MappedSuperclass;
  *
  * @author apple
  */
-
+@Entity
 public abstract class MasterEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
