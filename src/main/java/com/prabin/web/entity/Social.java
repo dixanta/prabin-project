@@ -7,6 +7,7 @@ package com.prabin.web.entity;
 
 import com.prabin.web.core.MasterEntity;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
@@ -14,6 +15,7 @@ import javax.persistence.Table;
  *
  * @author apple
  */
+@Entity
 @Table(name = "mst_social_medias")
 @MappedSuperclass
 public class Social extends MasterEntity{
