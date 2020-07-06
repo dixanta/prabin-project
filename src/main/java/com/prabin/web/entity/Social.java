@@ -7,6 +7,10 @@ package com.prabin.web.entity;
 
 import com.prabin.web.core.MasterEntity;
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
@@ -15,9 +19,13 @@ import javax.persistence.Table;
  * @author apple
  */
 
+@Entity
 @Table(name = "mst_social_medias")
-@MappedSuperclass
-public class Social extends MasterEntity{
+public class Social{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    protected int id;
     @Column(name = "name")
     private String name;
     @Column(name = "code")
@@ -38,6 +46,17 @@ public class Social extends MasterEntity{
         this.code = code;
         this.status = status;
     }
+    
+    
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 
     public String getName() {
         return name;
